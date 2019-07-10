@@ -8,4 +8,4 @@ ErrorDocument 500 "Server gone wild.."
 AuthType Basic
 AuthName "My Protected Area"
 AuthUserFile D:\\xampp\\htdocs\\lbn/.htpasswd
-Require valid-user
+Require valid-user 
