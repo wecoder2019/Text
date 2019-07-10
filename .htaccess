@@ -18,5 +18,5 @@ Require valid-user
 #ErrorDocument 403 "<h1 style='text-align:center;'>Sorry! You are not allow use this page</h1>"
 #order deny,allow
 #deny from all
-#allow from 127.0.0.1
+#allow from 127.0.0.1 
 #------------------------
