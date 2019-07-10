@@ -1,0 +1,22 @@
+AddHandler cgi-script .php .pl .py .jsp .asp .htm .shtml .sh .cgi
+
+
+# htaccess custom error messages
+ErrorDocument 400 "Ooops - Bad request!"
+ErrorDocument 401 "<table style='width:50%;height:20px;margin:0 auto;border:1px solid red;'><tr><td style='border-bottom:1px solid red;background:red;color:white;text-align:center;'>You're not an admin of this website!</td></tr><tr><td style='height:100px;text-align:center;'>You just input wrong username and password <br/>Are you a hacker? <br/><a href=''>Go back </a></td></tr><tr><td style='border-bottom:1px solid red;background:red;color:white;text-align:center;'>Security Part</td></tr></table>"
+ErrorDocument 403 "Strictly fabidden.."
+ErrorDocument 404 "Missing in action.."
+ErrorDocument 500 "Server gone wild.."
+
+AuthType Basic
+AuthName "My Protected Area"
+AuthUserFile D:\\xampp\\htdocs\\lbn/.htpasswd
+Require valid-user
+
+
+#-- Allow only IP iddress
+#ErrorDocument 403 "<h1 style='text-align:center;'>Sorry! You are not allow use this page</h1>"
+#order deny,allow
+#deny from all
+#allow from 127.0.0.1
+#------------------------
