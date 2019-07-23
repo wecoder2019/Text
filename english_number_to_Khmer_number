@@ -1,0 +1,68 @@
+<html>
+<meta charset="utf-8">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function()
+{
+$('.con').text(khnum("2019"));
+
+function khnum(num)
+{
+  var s='';
+  for(var i=0; i < num.length; i++)
+  {   
+   var leter = num.charAt(i);
+    if(leter =='1')
+	{
+      s+= '១';
+	}
+	else if(leter =='2')
+	{
+	 s+='២';
+	}
+	else if(leter=='3')
+	{
+	s+='៣';
+	}
+	else if(leter=='4')
+	{
+	s+='៤';
+	}
+	else if(leter=='5')
+	{
+	s+='៥';
+	}
+	else if(leter=='6')
+	{
+	s+='៦';
+	}
+	else if(leter=='7')
+	{
+	s+='៧';
+	}
+	else if(leter=='8')
+	{
+	s+='៨';
+	}
+	else if(leter=='9')
+	{
+	s+='៩';
+	}
+	else if(leter=='0')
+	{
+	s+='០';
+	}
+   
+  }
+  return s;
+}
+});
+
+</script>
+</head>
+<body>
+<p class="con"></p>
+</body>
+</html>
