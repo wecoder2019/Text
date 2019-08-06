@@ -1,0 +1,18 @@
+# htaccess custom error messages
+ErrorDocument 400 "Ooops - Bad request!"
+ErrorDocument 401 "<table style='width:50%;height:20px;margin:0 auto;border:1px solid red;'><tr><td style='border-bottom:1px solid red;background:red;color:white;text-align:center;'>You're not an admin of this website!</td></tr><tr><td style='height:100px;text-align:center;'>You just input wrong username and password <br/>Are you a hacker? <br/><a href='http://lbn.epizy.com'>Go back </a></td></tr><tr><td style='border-bottom:1px solid red;background:red;color:white;text-align:center;'>Security Part</td></tr></table>"
+
+ErrorDocument 404 "Missing in action.."
+ErrorDocument 500 "Server gone wild.."
+
+AuthType Basic
+AuthName "My Protected Area"
+AuthUserFile /home/vol12_1/epizy.com/epiz_24065373/htdocs/.htpasswd
+Require valid-user
+
+#-- Allow only IP iddress
+#ErrorDocument 403 "<table style='width:50%;height:20px;margin:0 auto;border:1px solid red;'><tr><td style='border-bottom:1px solid red;background:red;color:white;text-align:center;'>This page is limited access</td></tr><tr><td style='height:100px;text-align:center;'>You are not allow to access this page <br/><a href='http://lbn.epizy.com'>Go back </a></td></tr><tr><td style='border-bottom:1px solid red;background:red;color:white;text-align:center;'>Security Part</td></tr></table>"
+#order deny,allow
+#deny from all
+#allow from 116.212.128.110
+#------------------------
